@@ -98,7 +98,31 @@
             console.log(i)
         }
     
-- 断点调试
- test
-    
-    
+## 6. 断点调试配置
+1. 调试配置
+
+        {
+            // 使用 IntelliSense 了解相关属性。 
+            // 悬停以查看现有属性的描述。
+            // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+            "version": "0.2.0",
+            "configurations": [
+
+                
+                {
+                    "type": "node",
+                    "request": "launch",
+                    "name": "调试TS代码",
+
+                    // 调试时加载ts-node 包, 在调试是"直接"运行ts 代码
+                    "runtimeArgs": ["-r", "ts-node/register"],
+                    // 此处的hello.ts 为要调试的 ts 文件, 可修改为其他要调试的 ts 文件
+                    "args":["${workspaceFolder}/hello.ts"]
+                }
+            ]
+        }
+
+2. 安装调试用到的包到本地
+    - `npm config set registry http://registry.cnpmjs.org` : 设置镜像
+    - `npm install -g cnpm -registry=https://registry.npm.taobao.org` :  安装cnpm
+    - `sudo cnpm i ts-node typescript -D` : 安装`ts-node`, `typescript` 到本地 `node_modules` 中
