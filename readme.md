@@ -1,5 +1,16 @@
 # ts 学习笔记
 
+
+## git 操作
+    - git init : 初始化仓库
+    - git remote add origin "https://github.com/doosea/xxx.git" : 为当前仓库建立远程连接
+    - git branch -a : 列出所有本地和远程的分支
+    - git branch --set-upstream-to=origin/master master : 建立本地分支和远程分支的关联
+    - git config credential.helper store : 保存用户名和密码,不用再次输入
+    - git add file : 添加文件到暂存区
+    - git commit -m "msg" : 提交msg
+    - git push origin master : push 到远程
+
 ## 1. 变量
 
 1. 声明
